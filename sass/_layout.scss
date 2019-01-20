@@ -5,7 +5,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../images/pexels-photo-326311.jpeg");
   background-color: $grey-body;
 }
 
@@ -13,6 +12,10 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+
+  >div:last-child {
+    width: 100%;
+  }
 }
 
 .row {
@@ -50,8 +53,36 @@ body {
   align-content: flex-end;
 }
 
+.prop-button {
+  margin: 20px 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: $grey-title;
+  font-size: $font-size-16;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 15px 15px 10px $black;
+  transition-duration: .3s;
+}
+
+.add-board {
+  font-family: $font-roboto-regular;
+  text-transform: uppercase;
+  @extend .prop-button;
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
 .board {
   font-family: $font-roboto-bold;
+  background-image: url("../images/pexels-photo-326311.jpeg");
+  border: 5px solid $yellow-border;
+  padding: 0 20px;
+  margin: 20px 0;
+  box-shadow: 15px 15px 10px $black;
 
   h1 {
     color: $grey-title;
@@ -61,16 +92,7 @@ body {
   }
 
   .create-column {
-    margin: 20px 0;
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: $grey-title;
-    font-size: $font-size-16;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 15px 15px 10px $black;
-    transition-duration: .3s;
+    @extend .prop-button;
 
     &:active {
       box-shadow: none;
@@ -94,6 +116,7 @@ body {
       >div:first-child {
         background-color: $grey-title;
         box-shadow: 0 1px 10px $black;
+        cursor: grab;
 
         button {
           margin: 2px;

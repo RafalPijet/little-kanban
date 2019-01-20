@@ -8,7 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../images/pexels-photo-326311.jpeg");
   background-color: #282828;
 }
 
@@ -16,6 +15,10 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.container > div:last-child {
+  width: 100%;
 }
 
 .row {
@@ -131,18 +134,7 @@ body {
       align-content: flex-end;
 }
 
-.board {
-  font-family: "Roboto Bold", arial;
-}
-
-.board h1 {
-  color: #bababa;
-  margin: 0;
-  padding: 20px 0;
-  text-shadow: 15px 15px 2px #000;
-}
-
-.board .create-column {
+.prop-button, .add-board, .board .create-column {
   margin: 20px 0;
   width: 150px;
   height: 40px;
@@ -153,6 +145,31 @@ body {
   outline: none;
   box-shadow: 15px 15px 10px #000;
   transition-duration: .3s;
+}
+
+.add-board {
+  font-family: "Roboto Regular", arial;
+  text-transform: uppercase;
+}
+
+.add-board:active {
+  box-shadow: none;
+}
+
+.board {
+  font-family: "Roboto Bold", arial;
+  background-image: url("../images/pexels-photo-326311.jpeg");
+  border: 5px solid #EAB543;
+  padding: 0 20px;
+  margin: 20px 0;
+  box-shadow: 15px 15px 10px #000;
+}
+
+.board h1 {
+  color: #bababa;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 15px 15px 2px #000;
 }
 
 .board .create-column:active {
@@ -178,6 +195,8 @@ body {
 .board .column-container .column > div:first-child {
   background-color: #bababa;
   box-shadow: 0 1px 10px #000;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .board .column-container .column > div:first-child button {
