@@ -12,9 +12,6 @@
 <body>
     <div class="container">
         <div class="insert"></div>
-        <div class="row flex-center">
-            <button class="add-board">Add a board</button>
-        </div>
     </div>
     <script id="board-template" type="x-tmpl-mustache">
        <div class="board row">
@@ -28,6 +25,7 @@
     <script id="column-template" type="x-tmpl-mustache">
         <div class="column row flex-content-between">
              <div class="row col-12 flex-end">
+                 <button class="btn-edit hidden"><img class="edit-column" src="images/edit-regular.svg" alt="sorry"></button>
                  <button class="btn-delete">X</button>
              </div>
              <h2 class="column-title col-12 text-center">{{name}}</h2>
@@ -39,12 +37,17 @@
     </script>
     <script id="card-template" type="x-tmpl-mustache">
         <div class="card row flex-between">
-            <p class="col-11 row card-description">{{description}}</p>
+            <p class="col-10 row card-description">{{description}}</p>
+            <button class="col-1 row btn-edit hidden"><img class="edit-card" src="images/edit-regular.svg" alt="sorry"></button>
             <button class="col-1 row btn-delete">X</button>
         </div>
     </script>
 <script src="vendor/mustache.js"></script>
 <script src="vendor/Sortable.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/Board.js"></script>
+<script src="js/Column.js"></script>
+<script src="js/Card.js"></script>
+<script src="js/showExample.js"></script>
+<script src="js/App.js"></script>
 </body>
 </html>

@@ -134,6 +134,18 @@ body {
       align-content: flex-end;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.cursor-progress {
+  cursor: progress;
+}
+
+.display-off {
+  display: none;
+}
+
 .prop-button, .add-board, .board .create-column {
   margin: 20px 0;
   width: 150px;
@@ -199,11 +211,22 @@ body {
   cursor: grab;
 }
 
+.board .column-container .column > div:first-child:hover .btn-edit {
+  visibility: visible;
+}
+
 .board .column-container .column > div:first-child button {
   margin: 2px;
+  padding: 0;
   background-color: inherit;
   border: none;
   cursor: pointer;
+  outline: none;
+}
+
+.board .column-container .column > div:first-child button img {
+  height: 15px;
+  padding-top: 2px;
 }
 
 .board .column-container .column ul {
@@ -221,14 +244,24 @@ body {
   cursor: grab;
 }
 
+.board .column-container .column ul li:hover .btn-edit {
+  visibility: visible;
+}
+
 .board .column-container .column ul li .card p {
   margin: 10px 0;
 }
 
-.board .column-container .column ul li .card .btn-delete {
+.board .column-container .column ul li .card .btn-delete, .board .column-container .column ul li .card .btn-edit {
   background-color: inherit;
   cursor: pointer;
   border: none;
+  outline: none;
+}
+
+.board .column-container .column ul li .card .btn-delete img, .board .column-container .column ul li .card .btn-edit img {
+  padding: 0 2px 2px 0;
+  height: 14px;
 }
 
 .board .column-container .column .add-card {

@@ -53,6 +53,18 @@ body {
   align-content: flex-end;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.cursor-progress {
+  cursor: progress;
+}
+
+.display-off {
+  display: none;
+}
+
 .prop-button {
   margin: 20px 0;
   width: 150px;
@@ -118,11 +130,24 @@ body {
         box-shadow: 0 1px 10px $black;
         cursor: grab;
 
+        &:hover {
+          .btn-edit {
+            visibility: visible;
+          }
+        }
+
         button {
           margin: 2px;
+          padding: 0;
           background-color: inherit;
           border: none;
           cursor: pointer;
+          outline: none;
+
+          img {
+            height: 15px;
+            padding-top: 2px;
+          }
         }
       }
 
@@ -138,15 +163,27 @@ body {
           box-shadow: 0 -1px 10px $black;
           cursor: grab;
 
+          &:hover {
+            .btn-edit {
+              visibility: visible;
+            }
+          }
+
           .card {
             p {
               margin: 10px 0;
             }
 
-            .btn-delete {
+            .btn-delete, .btn-edit {
               background-color: inherit;
               cursor: pointer;
               border: none;
+              outline: none;
+
+              img {
+                padding: 0 2px 2px 0;
+                height: 14px;
+              }
             }
           }
         }
